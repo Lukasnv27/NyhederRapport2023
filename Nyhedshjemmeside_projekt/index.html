@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyhedshjemmeside</title>
+    <link rel="stylesheet" href="styles/style_main_elements.css">
+    <link rel="stylesheet" href="styles/style_top_elements.css">
+    <link rel="stylesheet" href="styles/style_sidebar.css">
+    <link rel="stylesheet" href="styles/style_bottom_left_elements.css">
+    <link rel="stylesheet" href="styles/style_bottom_right_elements.css">
+    <script src="scripts/favorites.js"></script>
+    <script src="scripts/time_date.js"></script>
+    <script src="scripts/weather_api.js"></script>
+    <script src="scripts/local_storage.js"></script>
+    <script src="scripts/news_api.js"></script>
+    <script src="https://kit.fontawesome.com/94e0013690.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <div class="left_side">
+        <div class="sidebar_buttons">
+            <div id="home_button" class="buttons">
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+            </div>
+            <div id="favorites_button" class="buttons">
+                <a href="favorite.html">
+                    <i class= "fa-solid fa-heart"></i>
+                </a>
+            </div>
+            <div id="profil_button" class="buttons">
+                <a href="update_delete_user.html">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="right_side">
+        <div class="top">
+            <div class="top_left">
+                <div class="search">
+                    
+                        
+                            <i onclick="search_news()"id="search_icon"class="fa-solid fa-magnifying-glass"></i>
+                                     
+                    <input type="text" id="search_box" placeholder="Search for new music, news, artist...">
+
+                    <label id="language_title">Vælg sprog:</label>
+                    <select name="language" id="langages_dropdown">
+                        <option value="en">Engelsk</option>
+                        <option value="de">Tysk</option>
+                        <option value="fr">Fransk</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="top_right">
+                <div class="top_right_parent">
+                    <div id="username_logged_in"></div>
+                    <i onclick="log_out()" id="log_out_icon" class="fa-solid fa-arrow-right-from-bracket"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom">
+
+            <div class="bottom_left">
+
+                
+                <div id="title_left_nyheder">Nyheder</div>
+
+                <div class="main_article">
+                    <div class="main_picture_parent">
+                        <div class="main_picture">
+                            <img id="picture_upload_0">
+                            <div id="title_upload_0" class="main_title_upload"></div>
+                            <div id="author_upload_0" class="main_author_upload"></div> 
+                                <i id="favorite_button_0" onclick="add_to_favorites(0)" class="favorite_button fa-regular fa-heart"></i>
+                                <a href="" id="url_upload_0">
+                                <button class="main_read_more_button">Read more</button>
+                            </a>
+                        </div>    
+                    </div>
+                </div>
+
+                <div class="secondary_articles_top article_row">
+                    <div id="article_1"class="small_articles">
+                        <img id="picture_upload_1" class="small_picture_upload">
+                        <div id="title_upload_1" class="small_title_upload"></div>
+                        <div class="inline_author_button">
+                            <div id="author_upload_1" class="small_author_upload inline"></div>
+                            <div class="position_small_button">
+                                <i id="favorite_button_1" onclick="add_to_favorites(1)" class="favorite_button fa-regular fa-heart"></i>
+                                <a href="" id="url_upload_1">
+                                    <button class="read_more_button">Read more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="article_2"class="small_articles">
+                        <img id="picture_upload_2" class="small_picture_upload">
+                        <div id="title_upload_2" class="small_title_upload"></div> 
+                        <div class="inline_author_button">
+                            <div id="author_upload_2" class="small_author_upload inline"></div> 
+                            <div class="position_small_button">
+                                <i id="favorite_button_2" onclick="add_to_favorites(2)" class="favorite_button fa-regular fa-heart"></i>
+                                <a href="" id="url_upload_2">
+                                    <button class="read_more_button">Read more</button>
+                                </a>
+                            </div>
+                        </div>       
+                    </div>
+
+                    <div id="article_3"class="small_articles">
+                        <img id="picture_upload_3" class="small_picture_upload">
+                        <div id="title_upload_3" class="small_title_upload"></div>
+                        <div class="inline_author_button">
+                            <div id="author_upload_3" class="small_author_upload inline"></div>
+                            <div class="position_small_button">
+                                <i id="favorite_button_3" onclick="add_to_favorites(3)" class="favorite_button fa-regular fa-heart"></i>
+                                <a href="" id="url_upload_3">
+                                    <button class="read_more_button" >Read more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom three articles -->
+
+                <div class="secondary_articles_bottom article_row">
+                    <div id="article_4"class="small_articles">
+                        <img id="picture_upload_4" class="small_picture_upload">
+                        <div id="title_upload_4" class="small_title_upload"></div>
+                        <div class="inline_author_button">
+                            <div id="author_upload_4" class="small_author_upload inline"></div>
+                            <div class="position_small_button">
+                                <i id="favorite_button_4" onclick="add_to_favorites(4)" class="favorite_button fa-regular fa-heart"></i>
+                                <a href="" id="url_upload_4">
+                                    <button class="read_more_button">Read more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="article_5"class="small_articles">
+                        <img id="picture_upload_5" class="small_picture_upload">
+                        <div id="title_upload_5" class="small_title_upload"></div>
+                        <div class="inline_author_button">
+                            <div id="author_upload_5" class="small_author_upload inline"></div>
+                            <div class="position_small_button">
+                                <i id="favorite_button_5" onclick="add_to_favorites(5)" class="favorite_button fa-regular fa-heart"></i>
+                                <a href="" id="url_upload_5">
+                                    <button class="read_more_button" >Read more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="article_6"class="small_articles">
+                        <img id="picture_upload_6" class="small_picture_upload">
+                        <div id="title_upload_6" class="small_title_upload"></div>
+                        <div class="inline_author_button">
+                            <div id="author_upload_6" class="small_author_upload inline"></div>
+                            <div class="position_small_button">
+                                <i id="favorite_button_6" onclick="add_to_favorites(6)" class="favorite_button fa-regular fa-heart"></i>
+                                <a href="" id="url_upload_6">
+                                    <button class="read_more_button" >Read more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom_right">
+                <div id="title_right_tid">Tid</div>
+                <div class="time_date_parent">
+                    <div id="time_date">
+                        <div id="time"></div>
+                        <div id="date"></div>
+                     </div>
+                </div>
+                
+
+                <div id="title_right_vejr">Vejr</div>
+
+                <div class="weather_live_parent"> 
+                <div class="weather_live">
+                    <div class="weather_inline_parent">
+                        <div class="weather_column inline">
+                            <div class="condition_width">
+                            <div class="current_temp_codition_parent">
+                                <img id="condition_icon" class="inline">
+                                <div id="temperature" class="inline"></div>
+                            </div>
+                            <div id="location"></div>
+                        </div>
+                        </div>
+                        <div class="weather_column inline">
+                            <div class="sunrise_width">
+                                <div class="sunrise_parent">
+                                    <img src="sun/sunrise.png" id="sunrise_icon" class="inline">
+                                    <div id="sunrise_text">Sunrise</div>
+                                    <div id="sunrise_time" class="inline"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="weather_column inline">
+                            <div class="sunset_width">
+                                <div class="sunset_parent">
+                                    <img src="sun/sunset.png" id="sunset_icon" class="inline">
+                                    <div id="sunset_text">Sunset</div>
+                                    <div id="sunset_time" class="inline"></div> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="read_more_button_width inline">
+                            <div class="weather_column">
+                                <a href="https://www.accuweather.com/en/dk/copenhagen/123094/weather-forecast/123094">
+                                    <button id="read_more_button">Read more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                   
+                </div>  
+                
+                <div class="weather_forecast_parent">
+                <div class="weather_forecast">
+                    <div class="forecast_inline_parent"> 
+                        <div class="title_readmore inline">  
+                            <div class="inline" id="forecast_title">Forecast</div>
+                            <a href="https://www.accuweather.com/en/dk/copenhagen/123094/weather-forecast/123094">
+                                <button class="inline"id="read_more_button">Read more</button>
+                            </a>
+                        </div>
+
+                    <div class="forecast_column">
+                        <div id="monday_parent" class="forecast_day_column inline">
+                            <div id="days_forecast_0" class="day">Man</div>
+                            <img id="condition_icon_0" class="weather_icon_forecast inline">
+                            <div id="forecast_temp_0"></div>
+                        </div>
+                        <div id="tuesday_parent "class="forecast_day_column inline">
+                            <div id="days_forecast_1" class="day">Tir</div>
+                            <img id="condition_icon_1"class="weather_icon_forecast inline">
+                            <div id="forecast_temp_1"></div>
+                        </div>
+                        <div id="wednesday_parent "class="forecast_day_column inline">
+                            <div id="days_forecast_2" class="day">Ons</div>
+                            <img id="condition_icon_2" class="weather_icon_forecast inline">
+                            <div id="forecast_temp_2"></div>
+                        </div>
+                        <div id="thursday_parent "class="forecast_day_column inline">
+                            <div id="days_forecast_3" class="day">Tor</div>
+                            <img id="condition_icon_3"class="weather_icon_forecast inline">
+                            <div id="forecast_temp_3"></div>
+                        </div>
+                        <div id="friday_parent"class="forecast_day_column inline">
+                            <div id="days_forecast_4" class="day">Fre</div>
+                            <img id="condition_icon_4"class="weather_icon_forecast inline">
+                            <div id="forecast_temp_4"></div>
+                        </div>
+                        <div id="saturday_parent"class="forecast_day_column inline">
+                            <div id="days_forecast_5" class="day">Lør</div>
+                            <img id="condition_icon_5"class="weather_icon_forecast inline">
+                            <div id="forecast_temp_5"></div>
+                        </div>
+                        <div id="sunday_parent "class="forecast_day_column inline">
+                            <div id="days_forecast_6" class="day">Søn</div>
+                            <img id="condition_icon_6" class="weather_icon_forecast inline">
+                            <div id="forecast_temp_6"></div>
+                        </div>
+
+                    </div>
+                </div>  
+            </div>
+            </div>
+        </div>
+    </div>
+        
+
+
+    </div>
+<script>
+    //Her indsætter en event listener som vil kalde funktionen efter all elementerne i dette html fil er blevet rendered 
+    //Vi gør dette fordi vi ikke kan sætte værdier på element inden der er blevet rendered
+    document.addEventListener("DOMContentLoaded", function () {
+        upload_username();
+        getNews()
+    });
+</script>
+</body>
+</html>

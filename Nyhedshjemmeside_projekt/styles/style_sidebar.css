@@ -1,0 +1,33 @@
+.sidebar_buttons{
+    margin-top: 100px;
+}
+
+.buttons{
+    display: flex;
+    background-color: white;
+    margin-left: 20%;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    height: 30px;
+    flex-direction: column;
+    
+}
+
+#home_button{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10%;
+}
+
+#favorites_button{
+    display: flex;
+    margin-bottom: 10%;
+}
+
+#profil_button{
+    display: flex;
+    
+}
+

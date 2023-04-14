@@ -1,0 +1,29 @@
+body {
+    margin-top: 50px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    color: rgb(0, 0, 0);
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  a, a:visited, a:focus{
+    color: black;
+    text-decoration: none;
+}
+
+#home{
+    font-size: larger;
+}

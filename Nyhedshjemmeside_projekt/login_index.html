@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles/style_login.css">
+    <link rel="stylesheet" href="styles/style_main_elements.css">
+    <link rel="stylesheet" href="styles/style_sidebar.css">
+    <link rel="stylesheet" href="styles/style_top_elements.css">
+    <script src="scripts/local_storage.js"></script>
+    <script src="scripts/login.js"></script>
+    <script src="https://kit.fontawesome.com/94e0013690.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="left_side">
+        <div class="sidebar_buttons">
+            <div id="home_button" class="buttons">
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+            </div>
+            <div id="favorites_button" class="buttons">
+                <a href="favorite.html">
+                    <i class= "fa-solid fa-heart"></i>
+                </a>
+            </div>
+            <div id="profil_button" class="buttons">
+                <a href="update_delete_user.html">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="right_side">
+        <div class="top">
+            <div class="top_left">
+                <div class="search">
+                    <a href="">
+                        <i id="search_icon"class="fa-solid fa-magnifying-glass"></i>
+                    </a>                    
+                    <input type="text" id="search_box" placeholder="Log ind eller opret bruger ">
+                </div>
+            </div>
+        </div>
+    
+    <form id="login_form" onsubmit="return false"> 
+        <h2>Login Form</h2>
+        <label for="username">Brugernavn:</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Kodeord:</label>
+        <input type="password" id="password" name="password">
+        <!-- funktionen køres når knappen trykkes-->
+        <button onclick="validate_login()">Login</button>
+        <p>Har du ikke en bruger? <a href="create_account_index.html"> Opret bruger</a></p>
+    </form>
+
+    
+    
+</body>
+</html>

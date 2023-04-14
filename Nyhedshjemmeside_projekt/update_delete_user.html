@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="scripts/update_delete_user.js"></script>
+<script src="scripts/local_storage.js"></script>
+<script src="scripts/favorites.js"></script>
+<link rel ="stylesheet" href="styles/update_user.css">
+<link rel="stylesheet" href="styles/style_login.css">
+<link rel="stylesheet" href="styles/style_main_elements.css">
+<script src="https://kit.fontawesome.com/94e0013690.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="rediger_form" onsubmit="return false">
+        <!-- hurtig fiks inline -->
+        <div id="home_button_to_home" class="buttons">
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+            </a>
+        </div>
+        <h2>Rediger bruger</h2>
+        
+        <label for="current_password">Nuværende kodeord</label>
+        <input type="password" id="current_password" name="current_password">
+        <label for="new_password">Ny kodeord</label>
+        <input type="password" id="new_password" name="new_password">
+        <label for="confirm_new_password">Gentag nye kodeord</label>
+        <input type="password" id="confirm_new_password" name="confirm_new_password">
+        <!-- Når knapperne bliver trykket på køres funktionerne-->
+        <button onclick="change_password()">Skift kodeord</button>
+        <button onclick="delete_user()">Slet bruger</button>
+    </form>
+    
+    <form id="favorite_category_form" onsubmit="return false">
+        <h3>Vælg en favorit kategori</h3>
+    <!-- Jeg har sat id'er med det samme navn på categorierne i min api så jeg ikke behøver at ændre værdier når de sendes via min fetch request  -->
+        <input type="radio" id="business" name="favorite_category">
+        <label for="business">Business</label>
+        <input type="radio" id="entertainment" name="favorite_category">
+        <label for="entertainment">Entertainment</label>
+        <input type="radio" id="general" name="favorite_category">
+        <label for="general">General</label>
+        <input type="radio" id="health" name="favorite_category">
+        <label for="health">Health</label>
+        <input type="radio" id="sports" name="favorite_category">
+        <label for="sports">Sports</label>
+        <input type="radio" id="science" name="favorite_category">
+        <label for="science">Science</label>
+        <input type="radio" id="technology" name="favorite_category">
+        <label for="technology">Technology</label>
+        <button onclick="save_user_favorite_category()" id="save_favorite_category">Gem</button>
+    </form>
+
+    <script>
+        //Her indsætter en event listener som vil kalde funktionen efter all elementerne i dette html fil er blevet rendered 
+        //Jeg gør dette fordi jeg ikke kan sætte værdier på element inden der er blevet rendered
+        document.addEventListener("DOMContentLoaded", function () {
+            show_favorite_category();
+        });
+    </script>
+    
+</body>
+</html>
+
