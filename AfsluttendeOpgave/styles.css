@@ -1,0 +1,363 @@
+body {
+    display: flex;
+    background-color: #00001b0b;
+}
+
+#venstreSøjle {
+    display: flex;
+    background-color: #373b53;
+    height: 800px;
+    width: 150px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#hus {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    height: 70px;
+    padding-right: 10px;
+}
+
+#husKnap {
+    display: flex;
+    height: 70px;
+    width: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+#hjerte {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    height: 70px;
+    padding-right: 10px;
+}
+
+#hjerteKnap {
+    display: flex;
+    height: 70px;
+    width: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+#resten {
+    display: flex;
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+#header {
+    display: flex;
+    background-color: #00001b0b;
+    height: 50px;
+    width: 1170px;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+#search {
+    display: flex;
+    height: 50px;
+    width: 1170px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#user {
+    display: flex;
+
+}
+
+#logUd {
+    display: flex;
+    height: 50px;
+    width: 100px;
+    flex-direction: column;
+    padding-left: 500px;
+    justify-content: center;
+} 
+
+#myInput {
+    display: flex;
+    height: 50px;
+    width: 400px;
+    border-radius: 30px;
+}
+
+#midterBoks {
+    display: flex;
+    height: 700px;
+    width: 600px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#tekstNyheder {
+    display: flex;
+    width: 600px;
+    height: 80px;
+}
+
+#storNyhed {
+    display: flex;
+    width: 600px;
+    height: 200px;
+    border-radius: 30px;
+}
+
+#mindreNyheder {
+    display: flex;
+    width: 600px;
+    height: 200px;
+}
+
+.lilleNyhed1 {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+}
+
+.lilleNyhed2 {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+}
+
+.lilleNyhed3 {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+}
+
+#mindreNyheder2 {
+    display: flex;
+    width: 600px;
+    height: 200px;
+    margin-top: 70px;
+}
+
+.lilleNyhed4 {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+}
+
+.lilleNyhed5 {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+}
+
+.lilleNyhed6 {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+}
+
+#sidsteSide {
+    display: flex;
+    height: 700px;
+    width: 600px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#tekstTid {
+    display: flex;
+    width: 600px;
+    height: 80px;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+#datoBoks {
+    display: flex;
+    justify-content: space-around;
+}
+
+.currentTime {
+    display: flex;
+    width: 600px;
+    height: 80px;
+    justify-content: space-around;
+}
+
+#tekstVejr {
+    display: flex;
+    width: 600px;
+    height: 80px;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+#solOp {
+    display: flex;
+    width: 600px;
+    height: 80px;
+    justify-content: space-around;
+}
+
+#forudsigt {
+    display: flex;
+    width: 600px;
+    height: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#readMoreWeather {
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+
+}
+
+#flytVejr {
+    display: flex;
+    width: 600px;
+    height: 200px;
+}
+
+.weatherWidget {
+    height: 200px;
+}
+
+#side {
+    display: flex;
+}
+
+#createdBy {
+    display: flex;
+    height: 200px;
+    width: 600px;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsHeader {
+    display: flex;
+    height: 200px;
+    width: 600px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#img1Header {
+    display: flex;
+    position: relative;
+    height: 200px;
+    width: 600px;
+    object-fit: cover;
+}
+
+#titleBoxHeader {
+    display: flex;
+    position: absolute;
+    height: 200px;
+    width: 600px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: rgba(255, 0, 0, 0.701);
+}
+
+#bottomSquareHeader {
+    display: flex;
+    position: absolute;
+    height: 200px;
+    width: 600px;
+    align-items: flex-end;
+    flex-direction: row;
+}
+
+#creatorBoxHeader {
+    display: flex;
+    position: absolute;
+    height: 200px;
+    width: 600px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: rgba(255, 0, 0, 0.701);
+}
+
+#readMoreBtnHeader {
+    display: flex;
+    position: absolute;
+    height: 200px;
+    width: 550px;  
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    
+}
+
+#createdBy1 {
+    display: flex;
+}
+
+#img1 {
+    display: flex;
+    object-fit: cover;
+}
+
+#titleBox {
+    display: flex;
+    width: 200px;
+    height: 55px;
+}
+
+#bottomSquare {
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#creatorBox {
+    display: flex;
+    height: 40px;
+    width: 70px;
+}
+
+#readMoreBtn {
+    display: flex;
+    box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px, rgb(51 51 51) 0px 0px 0px 3px;
+    align-items: center;
+    background-color: #59b8c1a2;
+    height: 50px;
+    width: 50px;
+}
+
+#theTime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visualcrossing-wx-widget {
+    display: flex;
+    height: 200px;
+    width: 600px;
+}
+
+#oldOrNew {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

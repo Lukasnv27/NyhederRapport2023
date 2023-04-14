@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eksamen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="searchbar.css">
+</head>
+<body>
+    <div id="venstreSøjle">
+        <div id="hus">
+            <button id="husKnap"><img src="xhome.png" alt="Home" width="50" height="50"></button>
+        </div>
+        <div id="hjerte">
+            <button id="hjerteKnap"><img src="xheart.png" alt="Hjerte" width="50" height="50"></button>
+        </div>
+    </div>
+
+    <div id="resten">
+        <div id="header">
+            <div id="search">
+                <input type="text" name="query" id="input" placeholder="Search for articles" onkeyup="search(this.value)"> <!--Søgefelt-->
+                
+                <div id="oldOrNew">
+                <label for="sort-by">Sort by:</label>
+                <select id="sort-by" onchange="handleSortByChange(this.value)"> <!--Dropdown menu-->
+                    <option value="new">New</option>
+                    <option value="old">Old</option>
+                </select>
+                </div>
+
+                <div id="user">
+                    <button id="Edit account" onclick="editAccount()">Edit account</button> <!--Bruger bliver sendt til editAccount.html-->
+                </div> 
+                <a href="register.html">
+                <button id="logout_btn"><img src="xlogOut.png" alt="Home" width="35" height="40"></button> <!--Bruger bliver sendt til register.html, og bliver således logget ud-->
+                </a>
+            </div>
+        </div>
+    
+        <div id="side">
+        <div id="midterBoks">
+            <div id="tekstNyheder"><h1>Nyheder</h1></div> <!--Nyheder-->
+            <div id="storNyhed"> <!--Stor nyhed-->
+                <div id="createdBy"></div>
+            
+            </div>
+            <div id="mindreNyheder"> <!--Mindre nyheder-->
+                <div class="lilleNyhed1">
+                    <div id="createdBy1"></div>
+                    
+                </div>
+                <div class="lilleNyhed2">
+                    <div id="createdBy2"></div>
+                     
+                </div>
+                <div class="lilleNyhed3">
+                    <div id="createdBy3"></div>
+                </div>
+            </div>
+            <div id="mindreNyheder2">
+                <div class="lilleNyhed4">
+                    <div id="createdBy4"></div>
+                    
+                </div>
+                <div class="lilleNyhed5">
+                    <div id="createdBy5"></div>
+                    
+                </div>
+                <div class="lilleNyhed6">
+                    <div id="createdBy6"></div>
+                </div>
+            </div>
+        </div>
+        <div id="sidsteSide">
+            <div id="tekstTid"><h3>Tid</h3></div> 
+            <div id="datoBoks"> <!--Dato og tid-->
+                <p id="theDate">
+                <p>GMT+01</p>
+                <div id="theTime">
+                <p id="timer"></p>
+                </div>
+            </div>
+                
+            <div id="tekstVejr"><h3>Vejr</h3></div>
+            <div id="solOp"> <!--Solopgang og solnedgang-->
+                <div id="sunupDiv">
+                    <img src="xsunrise.png" alt="sunrise.png" width="50" height="40">
+                    <p id="sunrise"></p>
+                </div>
+                <div id="sunsetDiv">
+                    <img src="xsunset.png" alt="sunset.png" width="50" height="40">
+                    <p id="sunset"></p>
+                </div>
+            </div> 
+            <div id="forudsigt"><p>Forecast</p>
+                <a href="https://www.dmi.dk/lokation/show/DK/2618425/K%C3%B8benhavn/"> 
+                <div id="readMoreWeather"><button>Read more</button></div> <!--Bruger bliver sendt til DMI's hjemmeside-->
+                </a>
+            </div>
+                <div class="weatherWidget"></div> <!--Vejr-widget-->
+            </div>
+        </div>
+    </div>
+
+    <script src="weather.js"></script>
+    <script src="clockBox.js"></script> 
+    <script src="sun.js"></script>
+    <script src="newsPictures.js"></script>
+    <script src="editAccount.js"></script>
+    <script src="favorites.js"></script>
+    <script src="trackArticles.js"></script>
+</body>
+</html>
+
+<!-- 
+Login:
+check - a. App’en skal tillade brugeren at logge ind 
+check - b. App’en skal gøre det muligt for en bruger at logge ud 
+
+2. Profil:
+check - a. App’en skal tillade en bruger at oprette en profil 
+check - b. App’en skal tillade en bruger at slette sin egen profil 
+check - c. App’en skal tillade en bruger at opdatere sin egen
+profil
+check - d. App’en skal tillade at en bruger kan sætte sine yndlings
+nyhedskategorier.
+check - e. App’en skal tillade at en bruger kan tilføje en eller
+flere nyhedsartikler til favoritter.
+check() - f. App’en skal tracke hvilke nyhedsartikler en bruger har
+læst. Dette gemmes ved hjælp af localstorage.
+
+3. Nyheder:
+check - a. App’en skal vise en liste af de seneste nyheder til
+brugeren.
+check - b. App’en skal kunne vise en enkelt nyhed med links og
+billede.
+c. App’en skal gøre det muligt for en bruger at søge på
+mindst to forskellige parametre for nyheder. F.eks.
+Dato, tid, sprog, land, osv… (få inspiration her).
+
+4. Vejret:
+check - a. App’en skal vise den nuværende tid og dato.
+check - b. App'en skal hente og vise vejrudsigten for de næste 7
+dage.
+check - c. App'en skal vise den nuværende temperatur.
+check - d. App’en skal vise solopgang og solnedgangs tidspunkt.
+check - e. App'en skal bruge vejrdata for lokationen københavn.
+-->

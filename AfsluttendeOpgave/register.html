@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="login">
+        <form name='form-login'>
+    
+            <h1>REGISTER</h1>
+    
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Username" required> 
+    
+            <label for="pw">Password</label>
+            <input type="password"
+                   id= "pw"
+                   placeholder="Password" required>
+
+                   <label for="favorite">Favorite news</label>
+                     <input type="text" id="favorite" placeholder="Favorite" required>
+    
+            <input id="rgstr_btn" type="submit" value="Register" onclick="store()">
+
+        </form>
+    </div>
+    
+    <div class="login">
+        <form name='form-login'>
+    
+            <h1>SIGN IN</h1>
+    
+            <label for="userName">Name</label>
+            <input type="text" id="userName" placeholder="Username" required>
+    
+            <label for="userPw">Password</label>
+            <input type="password" id= "userPw" placeholder="Password" required>
+    
+            <div id="remember">
+                <input type="checkbox" value="lsRememberMe" id="rememberMe"
+                       style="display: inline-block;">
+                <label>Remember me</label>
+            </div>
+    
+            <input id= "login_btn" type="button" value="Login" onclick="check()">
+        </form>
+    </div>
+   
+    <script src="register.js"></script>
+</body>
+</html>
