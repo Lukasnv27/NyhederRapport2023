@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="signUpBox">
+            <form role="form" style="display: grid;" onsubmit="">
+                <div id="inputBoxes">
+                    <div id="indtastOplysninger"><h1>Opret bruger</h1></div>
+
+                    <!-- First name inputbox -->
+                    <div id="firstName"> <input type="text" class="inputBox" id="firstName1" placeholder="First name" required>
+                    </div>
+                    
+                    <!-- Last name inputbox -->
+                    <div id="lastName">
+                        <input type="text" class="inputBox" id="lastName1" placeholder="Last name" required>
+                    </div>
+                    <!-- email inputbox -->
+                    <div id="email">
+                        <input type="text" class="inputBox" id="email1" placeholder="Email address" required>
+                    </div>
+                    <!-- Password inputbox -->
+                    <div id="password">
+                        <input type="password" class="inputBox" id="password1" autofill="on" placeholder="Password">
+                    </div>
+                    <strong id="succes"></strong>
+                </div>
+
+                <div id="opretButtonDiv">
+                    <button onclick="resultSignup()" id="opretButton">Opret bruger</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="signUp.js"></script>
+<link rel="stylesheet" href="signup.css">
+</html>

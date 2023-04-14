@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYHEDER</title>
+    <script src="https://kit.fontawesome.com/a2813d8f88.js" crossorigin="anonymous"></script> <!-- ikon link -->
+    <script src="https://unpkg.com/feather-icons"></script> 
+    <script src="signuptest/signUp.js"></script>
+</head>
+
+
+<div class="headerContainer">
+    <!-- searchBar -->
+    <div> <input id="searchBar" type="Searchbar" type="text" placeholder="  Search for new music, news, artists">
+    </div>
+    <div id="signUpDiv"> 
+        <div id="signUpButtonDiv">
+            <!-- refererer til login.HTML -->
+            <form action="http://127.0.0.1:5500/login/login.html"> 
+                <button id="signUpButton">Log ind</button></a>
+            </form>
+        </div>
+    </div>
+    
+    <div><button id="logUdButton" onclick="logUdButton()">Log ud</button></div>
+
+    <div><button id="opretBrugerButton" onclick="opretBrugerButton()">Opret Bruger</button></div>
+</div>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div>
+                <button id="hjem"><i class="fa-solid fa-house" style="font-size:25px;"></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="windowContainer">
+
+        <div id="venstreContainer">
+            <!--Til venstre-->
+            <h2>NYHEDER</h2>
+
+            <div id="latestNews"> <img id="tomtHjerte" src="tomthjerte.png" alt="tomtHjerte"> </div>
+
+            <div id="småBox"></div>
+        </div>
+
+        <!--til højre-->            
+        <div id="højreContainer">
+        <h2>TID</h2>
+
+        <div id="timeBox">
+            <span id="clock"></span>
+      
+            <span id="date"></span>
+        </div>
+
+            <div id="weather">
+                <div id="venstre"></div>
+
+                <div id="center">
+                    <div class="sunriseIkon"><i data-feather="sunrise" width="50px" height="50px"></i></div>
+                    <!--https://feathericons.com/?query=sunrise -->
+                    <div class="sunriseText">Sunrise</div>
+                    <div></div>
+                </div>
+                <div id="højre">
+                    <div><i class="sunsetIkon" data-feather="sunset" width="50px" height="50px"></i></div>
+                    <div>
+                        <p class="sunsetText">Sunset</p>
+                    </div>
+                </div>
+            </div>
+            <div id="weatherWeek"></div>
+        </div>
+    </div>
+    </section>
+</body>
+<link rel="stylesheet" href="./CSSindex/højreContainer.css">
+<link rel="stylesheet" href="./CSSindex/venstreContainer.css">
+<script src="weather/weather.js"></script>
+<script src="index.js"></script>
+
+</head>
+
+</html>

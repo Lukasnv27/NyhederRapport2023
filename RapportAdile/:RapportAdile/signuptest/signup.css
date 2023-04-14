@@ -1,0 +1,79 @@
+body{
+    margin: 0%;
+}
+
+    #container{
+        background-color: #d9d9d9;
+        width: 100%;
+        height: 820px;
+        display: flex;
+    }
+    #loginButtonDiv{
+        margin-left: 650px;
+    }
+
+    #signUpBox{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        justify-self: center;
+        height: 700px;
+        width: 600px;
+        border-radius: 10px;
+        margin-left: 30%;
+        background-color: rgb(248,248,251);
+        box-shadow: 0 2px 4px rgb(159, 137, 137);
+    }
+
+    #inputBoxes{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-self: center;
+        margin-top: 20px;
+    }
+
+    .inputBox{
+        width: 10cm;
+        height: 30px;
+        margin-bottom: 15px;
+        border: 1.3px solid rgba(44, 166, 210, 0.494);
+        border-radius: 3px;
+        text-align: center;
+    }
+
+
+
+    #indtastOplysninger{
+        color: rgb(9 77 101 / 57%);
+        display: flex;
+        justify-content: center;
+        font-size: small;
+        margin-bottom: 20px;
+    }
+
+
+    #opretButton{
+        margin-bottom: 15px;
+        height: 20px;
+        border: solid;
+        width: -webkit-fill-available;
+        border-color: rgb(44 167 210 / 37%);
+        background-color: white;
+        border-radius: 3px;
+        font-variant:all-small-caps;
+    }
+    #opretButton:hover{
+        display: flex;
+        justify-content: center;
+        transition: all 0.4s;
+        background-color: rgba(44, 166, 210, 0.494);
+        cursor: pointer;
+    }
+
+    #opretButtonDiv{
+        display: block;
+        justify-content: center;
+        margin-top: 10px;
+
+    }

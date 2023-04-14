@@ -1,0 +1,41 @@
+<!DOCTYPE html
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In</title>
+</head>
+<body>
+    <div id="container">
+    
+      <div id="signUpBox">
+        <form role="form" onsubmit=" ">
+          
+          <div id="logInInputBox"> 
+          <header><h1>Login</h1></header>
+          <!-- Vedhæfter til image userIcon -->
+          <div id="userIcon"> <img src="userIcon.png" style="font-size:10px; width: 180px;"></div> 
+            <div id="inputBoxes">
+              <!-- Inputbox Email -->
+              <div id="email">
+                <input type="text" class="inputBox" id="email4" placeholder="Email adress">  
+              </div>
+               <!-- Inputbox Password -->
+                <input type="password" class="inputBox" id="password4" placeholder="Password"> 
+              
+              <div>
+                <!-- Opretter en knap, med en eventlistner, der kalder på funktionen checkFunktion() -->
+                <button onclick="checkLogin()" style="margin-top: 5px;" id="logInButton">Log in</button> 
+              </div>
+            </div>
+        </div>
+        </form>
+      </div>
+    </div>
+</body>
+<link rel="stylesheet" href="login.css"> 
+<script src="../signuptest/signUp.js"></script>
+
+
+</html>
