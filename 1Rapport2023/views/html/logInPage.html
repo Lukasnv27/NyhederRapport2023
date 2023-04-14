@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log ind eller opret profil</title>
+    <!-- Jeg linker til CSS og en hjemmeside med symboler -->
+    <link rel="stylesheet" type="text/css" href="/views/styles/stylesForMainElements.css">
+    <link rel="stylesheet" type="text/css" href="/views/styles/stylesForMenuBar.css">
+    <link rel="stylesheet" type="text/css" href="/views/styles/stylesForTopOfPage.css">
+    <link rel="stylesheet" type="text/css" href="/views/styles/stylesForOverviewRight.css">
+    <link rel="stylesheet" type="text/css" href="/views/styles/stylesForOverviewLeft.css">
+    <link rel="stylesheet" type="text/css" href="/views/styles/stylesForProfile.css">
+
+    <!-- her linker jeg til en hjemmeside med ikoner -->
+    <script src="https://kit.fontawesome.com/06ba53b28d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Her har jeg min menu i venstre side-->
+    <div id="menuBar">
+        <div id="homePage" class="menuButtons"> 
+            <a href="homePage.html" class="menuButtonsLink" title="Log ind eller opret profil for at tilgå forsiden">
+                <i class="fa-solid fa-house fa-lg"></i> 
+            </a>
+        </div>
+        <div id="favorites" class="menuButtons">
+            <a href="favorites.html" class="menuButtonsLink" title="Log ind eller opret profil for at tilgå favoritter">
+                <i class="fa-solid fa-heart fa-lg"></i>
+            </a>
+        </div>
+    </div>
+
+<!-- Her er hele min højre side -->
+    <div id="rightSide">
+        <!-- Her har jeg min menu øverst -->
+        <div id="topOfPage">
+            <div id="searchBarMenu">
+                <div id="searchBarSide">
+                    <!-- her har jeg min søgebar -->
+                    <div id="searchBarField">
+                        <button id="searchButton" onclick="search()" disabled>
+                            <i class="fa-solid fa-magnifying-glass" id="magnifyingGlass"></i>
+                        </button>
+                        <input type="text" id="searchBarFieldInput" placeholder="Log ind for at søge" disabled>
+                    </div> 
+                </div>
+                <div id="profileSide">
+                    <a class="menuButtonsLink">
+                        <p id="profileInfo">Log ind eller opret profil</p>
+                    </a>
+                    <a id="loginIcon" class="menuButtonsLink">
+                        <i class="fa-solid fa-right-to-bracket fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Her har jeg mit overview  -->
+        <div id="bottomOfPage">
+            <!-- Her har jeg log in -->
+                <div class="loginBox">
+                    <h3 class="loginTitle">Log ind her</h3>
+                        <div class="form-group">
+                            <input type="text" class="formGroupInput" name="usernameLogin"  id="usernameLogin" placeholder="Username" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="formGroupInput" name="passwordLogin"  id="passwordLogin" placeholder="Password" required>
+                        </div>
+                        <div class="form-group"> 
+                            <input type="submit" class="readMoreButton" id="logIn" value="Log ind" onclick="logIn()">
+                        </div>
+                </div>
+
+                <!-- Her har jeg min opret profil -->
+                <div class="loginBox" onsubmit="createProfile()">
+                    <h3 class="loginTitle">Opret en profil</h3>
+                    <form action="./profile.html">
+                        <div class="form-group">
+                            <input type="text" class="formGroupInput" name="name1" id="firstName" placeholder="First Name" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="formGroupInput" name="name2" id="lastName" placeholder="Last Name" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="formGroupInput" name="Username" id="username" placeholder="Username" required /> 
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="formGroupInput" name="password" id="password" placeholder="Password" required />
+                        </div>
+                        <input type="submit" class="readMoreButton" value="Opret profil">
+                    </form>
+                </div>
+        </div>
+    </div>
+</body>
+
+<!-- Her linker jeg til min script-filer -->
+<script src="/views/scripts/getAPI.js"></script>
+<script src="/views/scripts/clock.js"></script>
+<script src="/views/scripts/profile.js"></script>
+<script src="/views/scripts/search.js"></script>
+<script src="/views/scripts/getWeatherApi.js"></script>
+
+</html>
