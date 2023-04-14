@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <!-- Jeg linker til CSS-filer-->
+    <link rel="stylesheet" type="text/css" href="/views/styles/stylesForMainElements.css">
+    <link rel="stylesheet" type="text/css" href="/views/styles/stylesForMenuBar.css">
+    <link rel="stylesheet" type="text/css" href="/views/styles/stylesForTopOfPage.css">
+    <link rel="stylesheet" type="text/css" href="/views/styles/stylesForOverviewRight.css">
+    <link rel="stylesheet" type="text/css" href="/views/styles/stylesForOverviewLeft.css">
+    <link rel="stylesheet" type="text/css" href="/views/styles/stylesForProfile.css">
+    <!-- Her linker jeg til en hjemmeside med symboler -->
+    <script src="https://kit.fontawesome.com/06ba53b28d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Her har jeg min menu i venstre side-->
+    <div id="menuBar">
+        <div id="homePage" class="menuButtons"> 
+            <a href="homePage.html" class="menuButtonsLink">
+                <i class="fa-solid fa-house fa-lg"></i>
+            </a>
+        </div>
+        <div id="favorites" class="menuButtons">
+            <a href="favorites.html" class="menuButtonsLink">
+                <i class="fa-solid fa-heart fa-lg"></i>
+            </a>
+        </div>
+    </div>
+
+     <!-- Her er hele min højre side -->
+    <div id="rightSide">
+        <!-- Her har jeg min menu øverst -->
+        <div id="topOfPage">
+            <div id="searchBarMenu">
+                <div id="searchBarSide">
+                    <!-- her har jeg min søgebar -->
+                    <div id="searchBarField" onclick="goToSearch()">
+                        <button id="searchButton" onclick="search()">
+                            <i class="fa-solid fa-magnifying-glass" id="magnifyingGlass"></i>
+                        </button>
+                        <p class="searchBarText"> Tryk her for at søge </p>
+                    </div> 
+                </div>
+
+                <!-- Her har jeg profiloplysninger og link til profilsiden -->
+                <div id="profileSide">
+                    <a href="profile.html" class="menuButtonsLink">
+                        <p id="profileInfoFirstName"> Fornavn </p>
+                    </a>
+                    <a href="profile.html" class="menuButtonsLink">
+                        <p id="profileInfoLastName"> Efternavn </p>
+                    </a>
+                    <a href="profile.html" class="menuButtonsLink">
+                        <img src="http://cdn.onlinewebfonts.com/svg/img_569204.png" alt="" class="profilePhoto"> 
+                    </a>
+                    <a id="loginIcon" class="menuButtonsLink" onclick="logOut()">
+                        <i class="fa-solid fa-right-from-bracket fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Her har jeg mit overview over brugerens info -->
+        <div id="bottomOfPageProfile">
+            <div id="proftileTitle">
+                <h1 id="welcomeMessage">Velkommen</h1>
+                <h1 id="firstNameTitle"></h1>
+            </div>
+            <h4>Dine oplysninger</h4>
+                <div>
+                    <div id="fistNameDiv" class="infoDiv">
+                        <p class="infoP">Fornavn</p>
+                        <p id="firstNameInfo" class="infoName"></p>
+                    </div>
+                    <div id="lastNameDiv" class="infoDiv">
+                        <p class="infoP">Efternavn</p>
+                        <p id="lastNameInfo" class="infoName"></p>
+                    </div>
+                    <div id="usernameDiv" class="infoDiv">
+                        <p class="infoP">Brugernavn</p>
+                        <p id="usernameInfo" class="infoName"></p>
+                    </div>
+                </div>
+            
+            <!-- Her kan brugeren sætte yndlingskategorier -->
+            <h4>Din yndlingskategori</h4>
+                <div class="favoritesInputDiv" onsubmit="addFavoriteCategory()">
+                    <form action="" class="favoritesInputDiv">
+                        <input type="text" id="favoritesInput" placeholder="Tilføj yndlingskategori" class="inputProfile" required>
+                        <button  class="buttonOnProfile" id="addFavoriteCategory">Tilføj</button>
+                    </form>
+                    <button onclick="removeFavoriteCategory()" class="buttonOnProfile" id="removeFavoriteCategory">Fjern</button>
+
+                </div>
+                <ul>
+                    <p id="favoriteCategoryOne"></p>
+                </ul>
+            
+                <!-- Her kan brugeren opdaterer sin profil -->
+            <h4> Opdater profil</h4>
+            <div id="UpdateFirstNameDiv">
+                <form action="" class="updateForm" onsubmit="updateFirstName()">
+                    <input type="text" placeholder="Fornavn" class="inputProfile" id="UpdateProfileInputFirstName" required>
+                    <input type="submit" class="buttonOnProfile" value="Opdater">
+                </form>
+            </div>
+            <div id="UpdateLastNameDiv">
+                <form action="" class="updateForm" onsubmit="updateLastname()">
+                    <input type="text" placeholder="Efternavn" class="inputProfile" id="UpdateProfileInputLastName" required>
+                    <input type="submit" class="buttonOnProfile" value="Opdater">
+                </form>
+            </div>
+            <div id="UpdateUsernamDiv">
+                <form action="" class="updateForm" onsubmit="updateUsername()">
+                    <input type="text" placeholder="Brugernavn" class="inputProfile" id="UpdateProfileInputUsername" required>
+                    <input type="submit" class="buttonOnProfile" value="Opdater">
+                </form>
+            </div>
+            <div id="UpdatePasswordDiv">
+                <form action="" class="updateForm" onsubmit="updatePassword()">
+                    <input type="password" placeholder="Adgangskode" class="inputProfile" id="UpdateProfileInputPassword" required>
+                    <input type="submit" class="buttonOnProfile" value="Opdater">
+                </form>
+            </div>
+
+
+            <!-- Her kan brugeren slette sin profil -->
+            <button class="buttonOnProfile" onclick="deleteProfile()">Slet profil</button> <!-- Når jeg laver onlick' skal min funktion kører-->
+        </div>
+    </div>
+</body>
+
+<!-- Her linker jeg til mine script-filer -->
+<script src="/views/scripts/getAPI.js"></script>
+<script src="/views/scripts/clock.js"></script>
+<script src="/views/scripts/profile.js"></script>
+<script src="/views/scripts/search.js"></script>
+<script src="/views/scripts/getWeatherApi.js"></script>
+
+</html>

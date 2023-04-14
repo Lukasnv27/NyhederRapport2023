@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search</title>
+    <!-- Jeg linker til CSS-filer-->
+    <link rel="stylesheet" type="text/css" href="/views/styles/stylesForMainElements.css">
+    <link rel="stylesheet" type="text/css" href="/views/styles/stylesForMenuBar.css">
+    <link rel="stylesheet" type="text/css" href="/views/styles/stylesForTopOfPage.css">
+    <link rel="stylesheet" type="text/css" href="/views/styles/stylesForOverviewRight.css">
+    <link rel="stylesheet" type="text/css" href="/views/styles/stylesForOverviewLeft.css">
+    <link rel="stylesheet" type="text/css" href="/views/styles/stylesForProfile.css">
+    
+    <!-- Her linker jeg til en hjemmeside med ikoner -->
+    <script src="https://kit.fontawesome.com/06ba53b28d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Her har jeg min menu i venstre side -->
+    <div id="menuBar">
+        <div id="homePage" class="menuButtons"> 
+            <a href="homePage.html" class="menuButtonsLink">
+                <i class="fa-solid fa-house fa-lg"></i>
+            </a>
+        </div>
+        <div id="favorites" class="menuButtons">
+            <a href="favorites.html" class="menuButtonsLink">
+                <i class="fa-solid fa-heart fa-lg"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- her har jeg hele min højre side -->
+    <div id="rightSide">
+        <!-- Her har min menubar øverst -->
+        <div id="topOfPage">
+            <div id="searchBarMenu">
+                <div id="searchBarSide">
+                    <!-- Her har jeg min søgebare -->
+                    <div id="searchBarField">
+                        <button id="searchButton" onclick="search()">
+                            <i class="fa-solid fa-magnifying-glass" id="magnifyingGlass"></i>
+                        </button>
+                        <input type="text" id="searchBarFieldInput" placeholder="Søg efter emne, kilde og meget mere" onenter>
+                    </div> 
+                </div>
+
+                <!-- Her har jeg profiloplysninger og link til profilside -->
+                <div id="profileSide">
+                    <a href="profile.html" class="menuButtonsLink">
+                        <p id="profileInfoFirstNameSearch"></p>
+                    </a>
+                    <a href="profile.html" class="menuButtonsLink">
+                        <p id="profileInfoLastNameSearch"></p>
+                    </a>
+                    <a href="profile.html" class="menuButtonsLink">
+                        <img src="http://cdn.onlinewebfonts.com/svg/img_569204.png" alt="" class="profilePhoto"> 
+                    </a>
+                    <a id="loginIcon" class="menuButtonsLink" onclick="logOut()">
+                        <i class="fa-solid fa-right-from-bracket fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Her har jeg mit overview med søgeresultater -->
+        <div id="bottomOfPage">
+            <div class="overview" id="overviewLeftFavorites">
+                <header class="headingText">Søgeresultater</header>
+                <div id="otherArticlesSearch"></div> 
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- Her linker jeg til mine script-filer -->
+<script src="/views/scripts/getAPI.js"></script>
+<script src="/views/scripts/clock.js"></script>
+<script src="/views/scripts/profile.js"></script>
+<script src="/views/scripts/search.js"></script>
+<script src="/views/scripts/getWeatherApi.js"></script>
+<script src="/views/scripts/getProfileInfoOnSearch.js"></script>
+
+</html>

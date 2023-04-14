@@ -1,0 +1,238 @@
+/* Her styler jeg højre side af oversigten */
+#overviewRight {
+    display: flex;
+    margin-right: 5%;
+    height: 100vh;
+    width: 50%;
+    background-color: #F8F8FB;
+}
+
+/* Her styler jeg tiden */
+#timeBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4%;
+}
+
+
+#time{ /*styr på*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 250px;
+    font-size: 60px;
+   
+
+}
+#date{ 
+    /* Kilde kia */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 90%;
+    margin-bottom: 40%;
+    margin-top: 0%;
+}
+
+/* Her styler jeg vejret */
+#weatherBox {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    padding-bottom: 10px;
+    justify-content: space-evenly;
+}
+
+#currentWeather {
+    display: flex;
+    height: 100%;
+    width: 20%;
+    flex-direction: column;
+}
+
+.currentWeatherTop {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#currentWeatherTopIcon {
+    display: flex;
+    align-items: flex-end;
+    margin-right: 5px;
+}
+.venstreTemp {
+    display: flex;
+    font-size: 350%;
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+.venstreTempLocation {
+    display: flex;
+}
+
+#currentWeatherBottomLocation {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#currentSunrise {
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    justify-content: center;
+    height: 100%;
+}
+
+.currentSunriseRightTop {
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#sunriseIcon {
+    display: flex;
+    width: 62px;
+    margin-top: 45px;
+    align-items: center;
+}
+
+.currentSunsetRightTop {
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#sunsetIcon {
+    display: flex;
+    width: 40px;
+    margin-top: 50px;
+    align-items: center;
+}
+
+#currentSunset {
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    justify-content: center;
+}
+
+
+/* Her styler jeg vejrudsigten  */
+#forecastBox {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: fit-content;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+}
+
+#forecastUpper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 28%;
+    border-bottom: rgb(206, 206, 206);;
+    border-bottom-style: solid;
+    margin-bottom: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+}
+
+#forecastBottom {
+    display: flex;
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.forecastDay {
+    border-color: rgb(206, 206, 206);
+    border-right-style: solid;
+    width: 14%;
+    height: 100px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.forecastWeekday {
+    display: flex;
+    justify-content: center;    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+}
+
+.forecastWeatherIcon {
+    display: flex;
+    justify-content: center;
+}
+
+.forecastWeather {
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+}
+
+#forecastDaySeven {
+    border: none;
+}
+
+.forecastIconSize {
+    display: flex;
+    width: 50px;
+}
+
+/* Da ikke alle mine vejrudsigt billeder er samme størrelse må jeg gå ind i hver enkelte og ændre dette */
+.rainIcon {
+    display: flex;
+    width: 40px;
+    margin-bottom: -5px;
+    margin-top: -7px;
+}
+
+.snowIcon {
+    display: flex;
+    width: 25px;
+}
+
+.fogIcon {
+    display: flex;
+    width: 30px;
+}
+
+.windIcon {
+    display: flex;
+    width: 40px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+.cloudIcon {
+    display: flex;
+    width: 30px;
+    margin-bottom: -4px;
+}
+
+.sunIcon {
+    display: flex;
+    width: 35px;
+    margin-top: -3px;
+    margin-bottom: -4px;
+}
+
+.partlyCloudyIcon {
+    display: flex;
+    width: 30px;
+    margin-top: -2px;
+    margin-bottom: 1px;
+}
