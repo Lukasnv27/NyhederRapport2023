@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <!-- styles -->
+    <link rel="stylesheet" href="/views/styles/mainElements.css" />
+    <link rel="stylesheet" href="/views/styles/sideBar.css" />
+    <link rel="stylesheet" href="/views/styles/topElements.css" />
+    <link rel="stylesheet" href="/views/styles/leftSide.css" />
+    <link rel="stylesheet" href="/views/styles/rightSide.css" />
+    <link rel="stylesheet" href="/views/styles/profile.css" />
+
+    <link rel="stylesheet" href="/views/styles/articleElements.css" />
+    <link rel="stylesheet" href="/views/styles/timeDateElements.css" />
+    <link rel="stylesheet" href="/views/styles/weatherElements.css" />
+
+    <script src="https://kit.fontawesome.com/94e0013690.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- Her har jeg min menu i venstre side-->
+    <div class="leftSide">
+        <div id="homePage" class="buttons">
+          <a href="index.html" class="menuButtonsLink">
+            <i class="fa-solid fa-house fa-lg"></i>
+          </a>
+        </div>
+    </div>
+
+<!-- Her er hele min højre side -->
+    <div id="rightSide">
+        <!-- Her har jeg min menu øverst -->
+        <div id="topOfPage">
+            <div id="searchBarSide">
+                <!-- her har jeg min søgebar -->
+                <div class="searchBarField">
+                  <button id="searchButton" onclick="searchNews()" disabled>
+                    <i class="fa-solid fa-magnifying-glass" id="magnifyingGlass"></i>
+                  </button>
+                  <input type="text" id="searchBox" class="searchBarFieldInput" placeholder="Søg efter emne, kilde og meget mere">
+    
+                </div>
+              </div>
+        </div>
+    
+        <!-- Her har jeg mit overview  -->
+        <div id="bottomOfPage">
+                <!-- Her har jeg log in -->
+                <div class="loginBox" onsubmit="validateLogin()">
+                    <h3 class="loginTitle">Log ind</h3>
+                    <form action="index.html">
+                        <div class="form-group">
+                            <input type="text" class="formGroupInput" name="username"  id="username" placeholder="Username" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="formGroupInput" name="password"  id="password" placeholder="Password" required>
+                        </div>
+                        <div class="form-group"> 
+                            <input type="submit" class="readMoreButton" id="logIn" value="Log ind">
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Her har jeg min opret profil -->
+
+                <div class="loginBox" onsubmit="createUser()">
+                    <h3 class="loginTitle">Opret profil</h3>
+                    <form action="index.html">
+                        <div class="form-group">
+                            <input type="text" class="formGroupInput" name="createUsername" id="createUsername" placeholder="Username" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="formGroupInput" name="email" id="email" placeholder="Email" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="formGroupInput" name="creatPassword" id="createPassword" placeholder="Password" required /> 
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="formGroupInput" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required />
+                        </div>
+                        <input type="submit" class="readMoreButton" value="Opret profil">
+                    </form> 
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script src="/views/scripts/localStorage.js"></script>
+<script src="/views/scripts/createAccount.js"></script>
+<script src="/views/scripts/login.js"></script>
+
+</html>

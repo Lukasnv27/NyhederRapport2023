@@ -1,0 +1,74 @@
+.bottomRight {
+  flex-direction: column;
+  display: flex;
+  width: 50%;
+  background: rgb(243, 241, 241);
+  justify-content: center;
+}
+
+#titleRightTime {
+  display: flex;
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.timeDateParent {
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+}
+
+#timeDate {
+  display: flex;
+  border-radius: 5px;
+  width: 100%;
+  height: 250px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  margin-left: -15px;
+  font-family: "News Cycle", sans-serif;
+  flex-direction: column;
+  margin-bottom: 5px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+#time {
+  display: flex;
+  font-size: 75px;
+}
+#timeBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 250px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4%;
+}
+
+#date {
+  display: flex;
+  font-size: 25px;
+}
+
+
+
+
+
+
+
+
+#overviewRight {
+    display: flex;
+    margin-right: 5%;
+    height: 100vh;
+    width: 50%;
+    background-color: #F8F8FB;
+}
