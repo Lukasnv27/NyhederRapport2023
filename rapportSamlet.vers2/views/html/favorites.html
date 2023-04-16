@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Favorit artikler</title>
+  <link rel="stylesheet" type="text/css" href="styles/favorite_articles.css">
+  <script src="scripts/local_storage.js"></script>
+  <script src="scripts/favorites.js"></script>
+</head>
+<body>
+  <h1>Favorit artikler</h1>
+  <ul id="favorite_articles"> 
+  </ul>
+  <h2><a id="home"href="index.html">Back Home</a></h2>
+  <script>
+    //Her indsætter en event listener som vil kalde funktionen efter all elementerne i dette html fil er blevet rendered 
+    //Vi gør dette fordi vi ikke kan sætte værdier på element inden der er blevet rendered
+    document.addEventListener("DOMContentLoaded", function () {
+      upload_favorite_articles()
+    });
+</script>
+</body>
+</html>

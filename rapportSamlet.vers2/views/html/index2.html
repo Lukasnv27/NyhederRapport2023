@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Nyhedshjemmeside</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="/views/styles/mainElements.css"/>
+    <link rel="stylesheet" href="/views/styles/sideBar.css"/>
+    <link rel="stylesheet" href="/views/styles/topElements.css"/>
+    <link rel="stylesheet" href="/views/styles/leftSide.css"/>
+    <link rel="stylesheet" href="/views/styles/rightSide.css"/>
+
+    <link rel="stylesheet" href="/views/styles/articleElements.css">
+    <link rel="stylesheet" href="/views/styles/timeDateElements.css">
+    <link rel="stylesheet" href="/views/styles/weatherElements.css">
+
+    <!-- icons Kia -->
+    <script src="https://kit.fontawesome.com/06ba53b28d.js" crossorigin="anonymous"></script>
+    <!-- Icons Lukas -->
+    <script src="https://kit.fontawesome.com/94e0013690.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <!-- menubar -->
+    <div class="leftSide">
+      <div class="sidebarButtons">
+        <div id="homeButton" class="buttons">
+          <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+          </a>
+        </div>
+        <div id="favoritesButton" class="buttons">
+          <a href="favorite.html">
+            <i class="fa-solid fa-heart"></i>
+          </a>
+        </div>
+        <div id="profilButton" class="buttons">
+          <a href="updateDeleteUser.html">
+            <i class="fa-solid fa-user"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- right side -->
+    <div class="rightSide">
+      <!-- top of page -->
+      <div class="top">
+        <div class="topLeft">
+          <div class="search">
+            <i onclick="search_news()" id="searchIcon" class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchBox" placeholder="Search for new music, news, artist..."/>
+            <select name="language" id="langagesDropdown">
+              <option value="en">Engelsk</option>
+              <option value="de">Tysk</option>
+              <option value="fr">Fransk</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="topRight">
+          <div class="topRightParent">
+            <div id="usernameLoggedIn"></div>
+            <i onclick="logOut()" id="logOutIcon" class="fa-solid fa-arrow-right-from-bracket"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- bottom of page -->
+      <div class="bottom">
+        <!-- main article -->
+        <div class="bottomLeft">
+          <div id="titleLeftNews">Nyheder</div>
+          <div class="mainArticle">
+            <div class="mainPictureParent">
+              <div class="mainPicture">
+                <img id="pictureUpload0" />
+                <div id="titleUpload0" class="mainTitleUpload"></div>
+                <div id="authorUpload0" class="mainAuthorUpload"></div>
+                <i id="favoriteButton0" onclick="addToFavorites(0)"class="favorite_button fa-regular fa-heart"></i>
+                <a href="" id="urlUpload0">
+                  <button class="mainReadMoreButton">Read more</button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- top three articles -->
+          <div class="secondaryArticlesTopArticleRow" class="otherArticles">
+            <div id="article1" class="smallArticles">
+              <img id="pictureUpload1" class="smallPictureUpload" />
+              <div id="titleUpload1" class="smallTitleUpload"></div>
+              <div class="inlineAuthorButton">
+                <div id="authorUpload1" class="smallAuthorUploadInline"></div>
+                <div class="positionSmallButton">
+                    <i id="favoriteButton1" onclick="addToFavorites(1)"class="favorite_button fa-regular fa-heart"></i>
+                  <a href="" id="urlUpload1">
+                    <button class="readMoreButton">Read more</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div id="article2" class="smallArticles">
+              <img id="pictureUpload2" class="smallPictureUpload" />
+              <div id="titleUpload2" class="smallTitleUpload"></div>
+              <div class="inlineAuthorButton">
+                <div id="authorUpload2" class="smallAuthorUploadInline"></div>
+                <div class="positionAmallButton">
+                    <i id="favoriteButton2" onclick="addToFavorites(2)"class="favorite_button fa-regular fa-heart"></i>
+                  <a href="" id="urlUpload2">
+                    <button class="readMoreButton">Read more</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="article3" class="smallArticles">
+              <img id="pictureUpload3" class="smallPictureUpload" />
+              <div id="titleUpload3" class="smallTitleUpload"></div>
+              <div class="inlineAuthorButton">
+                <div id="authorUpload3" class="smallAuthorUploadInline"></div>
+                <div class="positionAmallButton">
+                    <i id="favoriteButton3" onclick="addToFavorites(3)"class="favorite_button fa-regular fa-heart"></i>
+                  <a href="" id="urlUpload3">
+                    <button class="readMoreButton">Read more</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- bottom three articles -->
+          <div class="secondaryArticlesBottomArticleRow" class="otherArticles">
+            <div id="article4" class="smallArticles">
+              <img id="pictureUpload4" class="smallPictureUpload" />
+              <div id="titleUpload4" class="smallTitleUpload"></div>
+              <div class="inlineAuthorButton">
+                <div id="authorUpload4" class="smallAuthorUploadInline"></div>
+                <div class="positionAmallButton">
+                    <i id="favoriteButton4" onclick="addToFavorites(4)"class="favorite_button fa-regular fa-heart"></i>
+                  <a href="" id="urlUpload4">
+                    <button class="readMoreButton">Read more</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="article5" class="smallArticles">
+              <img id="pictureUpload5" class="smallPictureUpload" />
+              <div id="titleUpload5" class="smallTitleUpload"></div>
+              <div class="inlineAuthorButton">
+                <div id="authorUpload5" class="smallAuthorUploadInline"></div>
+                <div class="positionAmallButton">
+                    <i id="favoriteButton5" onclick="addToFavorites(5)"class="favorite_button fa-regular fa-heart"></i>
+                  <a href="" id="urlUpload5">
+                    <button class="readMoreButton">Read more</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="article6" class="smallArticles">
+              <img id="pictureUpload6" class="smallPictureUpload" />
+              <div id="titleUpload6" class="smallTitleUpload"></div>
+              <div class="inlineAuthorButton">
+                <div id="authorUpload6" class="smallAuthorUploadInline"></div>
+                <div class="positionAmallButton">
+                    <i id="favoriteButton6" onclick="addToFavorites(6)"class="favorite_button fa-regular fa-heart"></i>
+                  <a href="" id="urlUpload6">
+                    <button class="readMoreButton">Read more</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- bottom right -->
+        <div class="bottomRight">
+          <!-- time and date -->
+          <div id="titleRightTime">Tid</div>
+          <div class="timeDateParent">
+            <div id="timeDate">
+              <div id="time"></div>
+              <div id="date"></div>
+            </div>
+          </div>
+
+          <!-- weather -->
+          <div id="titleRightWeather">Vejr</div>
+
+          <!-- weather now -->
+          <div class="weatherLiveParent">
+            <div class="weatherLive">
+              <div class="weatherInlineParent">
+                <div class="weatherColumnInline">
+                  <div class="conditionWidth">
+                    <div class="currentTempCoditionParent">
+                      <img id="conditionIcon" class="inline" />
+                      <div id="temperature" class="inline"></div>
+                    </div>
+                    <div id="location"></div>
+                  </div>
+                </div>
+                <div class="weatherColumnInline">
+                  <div class="sunriseWidth">
+                    <div class="sunriseParent">
+                      <img src="/views/icons/Kia/sunrise.png" id="sunriseIcon" class="inline"/>
+                      <div id="sunriseText">Sunrise</div>
+                      <div id="sunriseTime" class="inline"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="weatherColumnInline">
+                  <div class="sunsetWidth">
+                    <div class="sunsetParent">
+                      <img src="/views/icons/Kia/sunset.png" id="sunset_icon" class="inline"/>
+                      <div id="sunsetText">Sunset</div>
+                      <div id="sunsetTime" class="inline"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="readMoreButtonWidthInline">
+                  <div class="weatherColumn">
+                    <a href="https://www.accuweather.com/en/dk/copenhagen/123094/weather-forecast/123094">
+                      <button id="read_more_button">Read more</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Her har jeg vejrudsigten -->
+          <div class="box" id="forecastBox">
+            <div id="forecastUpper">
+                <p>Forecast</p>
+                <a href="https://www.dmi.dk/lokation/show/DK/2618425/K%C3%B8benhavn/#9" class="readMoreButton">Read more</a>
+            </div>
+            <div id="forecastBottom">
+                <div id="forecastDayOne" class="forecastDay">
+                    <p id="forecastWeekdayOne" class="forecastWeekday"></p>
+                    <div id="forecastWeatherIconOne" class="forecastWeatherIcon"></div>
+                    <p id="forcastWeatherTempOne" class="forecastWeather"></p>
+                </div>
+                <div id="forecastDayTwo" class="forecastDay">
+                    <p id="forecastWeekdayTwo" class="forecastWeekday"></p>
+                    <div id="forecastWeatherIconTwo" class="forecastWeatherIcon"></div>
+                    <p id="forcastWeatherTempTwo" class="forecastWeather"></p>
+                </div>
+                <div id="forecastDayThree" class="forecastDay">
+                    <p id="forecastWeekdayThree" class="forecastWeekday"></p>
+                    <div id="forecastWeatherIconThree" class="forecastWeatherIcon"></div>
+                    <p id="forcastWeatherTempThree" class="forecastWeather"></p>
+                </div>
+                <div id="forecastDayFour" class="forecastDay">
+                    <p id="forecastWeekdayFour" class="forecastWeekday"></p>
+                    <div id="forecastWeatherIconFour" class="forecastWeatherIcon"></div>
+                    <p id="forcastWeatherTempFour" class="forecastWeather"></p>
+                </div>
+                <div id="forecastDayFive" class="forecastDay">
+                    <p id="forecastWeekdayFive" class="forecastWeekday"></p>
+                    <div id="forecastWeatherIconFive" class="forecastWeatherIcon"></div>
+                    <p id="forcastWeatherTempFive" class="forecastWeather"></p>
+                </div>
+                <div id="forecastDaySix" class="forecastDay">
+                    <p id="forecastWeekdaySix" class="forecastWeekday"></p>
+                    <div id="forecastWeatherIconSix" class="forecastWeatherIcon"></div>
+                    <p id="forcastWeatherTempSix" class="forecastWeather"></p>
+                </div>
+                <div id="forecastDaySeven" class="forecastDay">
+                    <p id="forecastWeekdaySeven" class="forecastWeekday"></p>
+                    <div id="forecastWeatherIconSeven" class="forecastWeatherIcon"></div>
+                    <p id="forcastWeatherTempSeven" class="forecastWeather"></p>
+                </div>
+            </div>
+        </div>
+          <!-- weather forecast
+          <div class="weatherForecastParent">
+            <div class="weatherForecast">
+              <div class="forecastInlineParent">
+                <div class="titleReadmoreInline">
+                  <div class="inline" id="forecastTitle">Forecast</div>
+                  <a href="https://www.accuweather.com/en/dk/copenhagen/123094/weather-forecast/123094">
+                    <button class="inline" id="readMoreButton">Read more</button>
+                  </a>
+                </div>
+
+                <div class="forecastColumn">
+                  <div id="mondayParent" class="forecastDayColumnInline">
+                    <div id="daysForecast0" class="day">Man</div>
+                    <img id="conditionIcon0" class="weatherIconForecastInline"/>
+                    <div id="forecastTemp0"></div>
+                  </div>
+                  <div id="tuesdayParent" class="forecastDayColumnInline">
+                    <div id="daysForecast1" class="day">Tir</div>
+                    <img id="conditionIcon1" class="weatherIconForecastInline"/>
+                    <div id="forecastTemp1"></div>
+                  </div>
+                  <div id="wednesdayParent" class="forecastDayColumnInline">
+                    <div id="daysForecast2" class="day">Ons</div>
+                    <img id="conditionIcon2" class="weatherIconForecastInline"/>
+                    <div id="forecastTemp2"></div>
+                  </div>
+                  <div id="thursdayParent" class="forecastDayColumnInline">
+                    <div id="daysForecast3" class="day">Tors</div>
+                    <img id="conditionIcon3" class="weatherIconForecastInline"/>
+                    <div id="forecastTemp3"></div>
+                  </div>
+                  <div id="fridayParent" class="forecastDayColumnInline">
+                    <div id="daysForecast4" class="day">Fre</div>
+                    <img id="conditionIcon4" class="weatherIconForecastInline"/>
+                    <div id="forecastTemp4"></div>
+                  </div>
+                  <div id="saturdayParent" class="forecastDayColumnInline">
+                    <div id="daysForecast5" class="day">Lør</div>
+                    <img id="conditionIcon5" class="weatherIconForecastInline"/>
+                    <div id="forecastTemp5"></div>
+                  </div>
+                  <div id="sundayParent" class="forecastDayColumnInline">
+                    <div id="daysForecast6" class="day">Søn</div>
+                    <img id="conditionIcon6" class="weatherIconForecastInline"/>
+                    <div id="forecastTemp6"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      //Her indsættes en eventListener som vil kalde funktionen efter all elementerne i dette html fil er blevet rendered
+      //Vi gør dette fordi vi ikke kan sætte værdier på element inden der er blevet rendered
+      document.addEventListener("DOMContentLoaded", function () {
+        uploadUsername();
+        getNews();
+      });
+    </script>
+    <script src="/views/scripts/favorites.js"></script>
+    <script src="/views/scripts/timeDate.js"></script>
+    <script src="/views/scripts/weatherApi.js"></script>
+    <script src="/views/scripts/getWeatherApi.js"></script>
+
+    <script src="/views/scripts/localStorage.js"></script>
+    <script src="/views/scripts/newsApi.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+#redigerForm {
+  margin-left: 350px;
+  margin-top: 50px;
+}
+
+#favoriteCategoryForm {
+  margin-top: 50px;
+  margin-right: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+#saveFavoriteCategory {
+  margin-top: 10px;
+}

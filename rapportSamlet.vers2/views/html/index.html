@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Nyhedshjemmeside</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="/views/styles/mainElements.css" />
+    <link rel="stylesheet" href="/views/styles/sideBar.css" />
+    <link rel="stylesheet" href="/views/styles/topElements.css" />
+    <link rel="stylesheet" href="/views/styles/leftSide.css" />
+    <link rel="stylesheet" href="/views/styles/rightSide.css" />
+
+    <link rel="stylesheet" href="/views/styles/articleElements.css" />
+    <link rel="stylesheet" href="/views/styles/timeDateElements.css" />
+    <link rel="stylesheet" href="/views/styles/weatherElements.css" />
+
+    <!-- icons Kia -->
+    <script
+      src="https://kit.fontawesome.com/06ba53b28d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Icons Lukas -->
+    <script
+      src="https://kit.fontawesome.com/94e0013690.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Her har jeg min menu i venstre side-->
+    <div class="leftSide">
+      <div id="homePage" class="buttons">
+        <a href="index.html" class="menuButtonsLink">
+          <i class="fa-solid fa-house fa-lg"></i>
+        </a>
+      </div>
+      <div id="favorites" class="buttons">
+        <a href="favorites.html" class="menuButtonsLink">
+          <i class="fa-solid fa-heart fa-lg"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Her er hele min højre side -->
+    <div id="rightSide">
+      <!-- Her har jeg min menu øverst -->
+      <div id="topOfPage">
+        <div id="searchBarMenu">
+          <div id="searchBarSide">
+            <!-- her har jeg min søgebar -->
+            <div class="searchBarField">
+              <button id="searchButton" onclick="searchNews()">
+                <i
+                  class="fa-solid fa-magnifying-glass"
+                  id="magnifyingGlass"
+                ></i>
+              </button>
+              <input type="text" id="searchBox" class="searchBarFieldInput" placeholder="Søg efter emne, kilde og meget mere">
+              <select name="language" id="langagesDropdown">
+                <option value="en">Engelsk</option>
+                <option value="de">Tysk</option>
+                <option value="fr">Fransk</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Her har jeg profiloplysninger og link til profilsiden -->
+          <div id="profileSide">
+            <a href="profile.html" class="menuButtonsLink">
+              <p id="usernameLoggedIn"></p>
+            </a>
+          
+            <!-- <a href="profile.html" class="menuButtonsLink">
+              <img src="http://cdn.onlinewebfonts.com/svg/img_569204.png" alt="" class="profilePhoto"> 
+            </a> -->
+            <a href="profile.html" class="menuButtonsLink">
+              <img src="" alt="" id="profilePhoto"> 
+            </a>
+            <a id="loginIcon" class="menuButtonsLink" onclick="logOut()">
+              <i class="fa-solid fa-right-from-bracket fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Her har jeg mit overview  -->
+      <div id="bottomOfPage">
+        <!-- Her har jeg mine nyheder -->
+        <div class="overview" id="overviewLeft">
+          <header class="headingText">Nyheder</header>
+          <!-- Her har jeg min store nyhed -->
+          <div id="bigArticle">
+                <div class="mainPictureParent">
+                  <div class="mainPicture">
+                    <img id="pictureUpload0" />
+                    <div id="titleUpload0" class="mainTitleUpload"></div>
+                    <div id="authorUpload0" class="mainAuthorUpload"></div>
+                    <i id="favoriteButton0" onclick="addToFavorites(0)"class="favorite_button fa-regular fa-heart"></i>
+                    <a href="" id="urlUpload0" class="mainReadMoreButton">Read More</a>
+
+                  </div>
+                </div>
+            </div>
+          <!-- Her har jeg mine små nyheder -->
+          <div id="otherArticles">
+            <div id="article1" class="smallArticles">
+              <img id="pictureUpload1" class="smallPictureUpload" />
+              <div id="titleUpload1" class="smallTitleUpload"></div>
+              <div class="inlineAuthorButton">
+                <div id="authorUpload1" class="smallAuthorUploadInline"></div>
+                <div class="positionSmallButton">
+                    <i id="favoriteButton1" onclick="addToFavorites(1)"class="favorite_button fa-regular fa-heart"></i>
+                    <a href="" id="urlUpload1" class="readMoreButton">Read More</a>
+
+                </div>
+              </div>
+            </div>
+          
+            <div id="article2" class="smallArticles">
+              <img id="pictureUpload2" class="smallPictureUpload" />
+              <div id="titleUpload2" class="smallTitleUpload"></div>
+              <div class="inlineAuthorButton">
+                <div id="authorUpload2" class="smallAuthorUploadInline"></div>
+                <div class="positionSmallButton">
+                    <i id="favoriteButton2" onclick="addToFavorites(2)"class="favorite_button fa-regular fa-heart"></i>
+                    <a href="" id="urlUpload2" class="readMoreButton">Read More</a>
+                </div>
+              </div>
+            </div>
+
+            <div id="article3" class="smallArticles">
+              <img id="pictureUpload3" class="smallPictureUpload" />
+              <div id="titleUpload3" class="smallTitleUpload"></div>
+              <div class="inlineAuthorButton">
+                <div id="authorUpload3" class="smallAuthorUploadInline"></div>
+                <div class="positionSmallButton">
+                    <i id="favoriteButton3" onclick="addToFavorites(3)"class="favorite_button fa-regular fa-heart"></i>
+                    <a href="" id="urlUpload3" class="readMoreButton">Read More</a>
+                </div>
+              </div>
+            </div>
+
+            <div id="article4" class="smallArticles">
+              <img id="pictureUpload4" class="smallPictureUpload" />
+              <div id="titleUpload4" class="smallTitleUpload"></div>
+              <div class="inlineAuthorButton">
+                <div id="authorUpload4" class="smallAuthorUploadInline"></div>
+                <div class="positionSmallButton">
+                    <i id="favoriteButton4" onclick="addToFavorites(4)"class="favorite_button fa-regular fa-heart"></i>
+                    <a href="" id="urlUpload4" class="readMoreButton">Read More</a>
+                </div>
+              </div>
+            </div>
+
+            <div id="article5" class="smallArticles">
+              <img id="pictureUpload5" class="smallPictureUpload" />
+              <div id="titleUpload5" class="smallTitleUpload"></div>
+              <div class="inlineAuthorButton">
+                <div id="authorUpload5" class="smallAuthorUploadInline"></div>
+                <div class="positionSmallButton">
+                    <i id="favoriteButton5" onclick="addToFavorites(5)"class="favorite_button fa-regular fa-heart"></i>
+                    <a href="" id="urlUpload5" class="readMoreButton">Read More</a>
+                </div>
+              </div>
+            </div>
+
+            <div id="article6" class="smallArticles">
+              <img id="pictureUpload6" class="smallPictureUpload" />
+              <div id="titleUpload6" class="smallTitleUpload"></div>
+              <div class="inlineAuthorButton">
+                <div id="authorUpload6" class="smallAuthorUploadInline"></div>
+                <div class="positionSmallButton">
+                    <i id="favoriteButton6" onclick="addToFavorites(6)"class="favorite_button fa-regular fa-heart"></i>
+                    <a href="" id="urlUpload6" class="readMoreButton">Read More</a>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Her har jeg vejret, tid mv. -->
+        <div class="overview" id="overviewRight">
+          <!-- Her har jeg tid -->
+          <header class="headingText">Tid</header>
+          <div id="timeBox" class="box">
+            <div id="time">
+              <span id="span" class="timeText"></span>
+            </div>
+            <div id="date">
+              <h class="dateText"
+                >D. <h id="dateDay" class="dateText"></h>
+                <h id="dateWeekday" class="dateText">&nbsp;</h>,
+                <h id="dateMonth" class="dateText"></h>
+                <h id="dateYear" class="dateText"></h
+              ></h>
+            </div>
+            <div id="dateTimezone">
+              <p id="timeTimezone"></p>
+            </div>
+          </div>
+
+          <!-- Her har jeg nuværende vejr -->
+          <header class="headingText">Vejr</header>
+          <div class="box" id="weatherBox">
+            <div id="currentWeather">
+              <div class="currentWeatherTop">
+                <div id="currentWeatherTopIcon"></div>
+                <div id="currentWeatherTopTemp"></div>
+              </div>
+              <div class="currentWeatherBottom">
+                <p id="currentWeatherBottomLocation"></p>
+              </div>
+            </div>
+
+            <!-- Her har jeg solopgang og solnedgang-->
+            <div class="currentSunriseLeft">
+              <img src="../icons/Kia/sunrise.png" id="sunriseIcon" alt="" />
+            </div>
+            <div class="currentSunriseRight">
+              <div id="currentSunrise">
+                <p class="currentSunriseRightTop">Sunrise</p>
+                <div class="currentSunriseRightBottom"></div>
+              </div>
+            </div>
+
+            <div class="currentSunsetLeft">
+              <img src="../icons/Kia/sunset.png" id="sunsetIcon" alt="" />
+            </div>
+            <div id="currentSunset">
+              <p class="currentSunsetRightTop">Sunset</p>
+            </div>
+          </div>
+
+          <!-- Her har jeg vejrudsigten -->
+          <div class="box" id="forecastBox">
+            <div id="forecastUpper">
+              <p>Forecast</p>
+              <a
+                href="https://www.dmi.dk/lokation/show/DK/2618425/K%C3%B8benhavn/#9"
+                class="readMoreButton"
+                >Read more</a
+              >
+            </div>
+            <div id="forecastBottom">
+              <div id="forecastDayOne" class="forecastDay">
+                <p id="forecastWeekdayOne" class="forecastWeekday"></p>
+                <div
+                  id="forecastWeatherIconOne"
+                  class="forecastWeatherIcon"
+                ></div>
+                <p id="forcastWeatherTempOne" class="forecastWeather"></p>
+              </div>
+              <div id="forecastDayTwo" class="forecastDay">
+                <p id="forecastWeekdayTwo" class="forecastWeekday"></p>
+                <div
+                  id="forecastWeatherIconTwo"
+                  class="forecastWeatherIcon"
+                ></div>
+                <p id="forcastWeatherTempTwo" class="forecastWeather"></p>
+              </div>
+              <div id="forecastDayThree" class="forecastDay">
+                <p id="forecastWeekdayThree" class="forecastWeekday"></p>
+                <div
+                  id="forecastWeatherIconThree"
+                  class="forecastWeatherIcon"
+                ></div>
+                <p id="forcastWeatherTempThree" class="forecastWeather"></p>
+              </div>
+              <div id="forecastDayFour" class="forecastDay">
+                <p id="forecastWeekdayFour" class="forecastWeekday"></p>
+                <div
+                  id="forecastWeatherIconFour"
+                  class="forecastWeatherIcon"
+                ></div>
+                <p id="forcastWeatherTempFour" class="forecastWeather"></p>
+              </div>
+              <div id="forecastDayFive" class="forecastDay">
+                <p id="forecastWeekdayFive" class="forecastWeekday"></p>
+                <div
+                  id="forecastWeatherIconFive"
+                  class="forecastWeatherIcon"
+                ></div>
+                <p id="forcastWeatherTempFive" class="forecastWeather"></p>
+              </div>
+              <div id="forecastDaySix" class="forecastDay">
+                <p id="forecastWeekdaySix" class="forecastWeekday"></p>
+                <div
+                  id="forecastWeatherIconSix"
+                  class="forecastWeatherIcon"
+                ></div>
+                <p id="forcastWeatherTempSix" class="forecastWeather"></p>
+              </div>
+              <div id="forecastDaySeven" class="forecastDay">
+                <p id="forecastWeekdaySeven" class="forecastWeekday"></p>
+                <div
+                  id="forecastWeatherIconSeven"
+                  class="forecastWeatherIcon"
+                ></div>
+                <p id="forcastWeatherTempSeven" class="forecastWeather"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  //Her indsættes en eventListener som vil kalde funktionen efter all elementerne i dette html fil er blevet rendered
+  //Vi gør dette fordi vi ikke kan sætte værdier på element inden der er blevet rendered
+  document.addEventListener("DOMContentLoaded", function () {
+    uploadUsername();
+    getNews();
+  });
+</script>
+<script src="/views/scripts/favorites.js"></script>
+<script src="/views/scripts/timeDate.js"></script>
+<script src="/views/scripts/getWeatherApi.js"></script>
+<script src="/views/scripts/localStorage.js"></script>
+
+<script src="/views/scripts/localStorage.js"></script>
+<script src="/views/scripts/newsApi.js"></script>
